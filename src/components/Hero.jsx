@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <main className="relative w-full h-screen overflow-hidden fiex justify-center mb-[10%]">
       <video
-        src="/videos/hero.mp4"
+        src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/videos/hero.mp4"
         autoPlay
         loop
         muted
@@ -12,7 +12,7 @@ const Hero = () => {
 
       <div className="absolute left-1/2 bottom-[15%] flex flex-col items-center gap-5 -translate-x-1/2">
         <img
-          src="/images/illu-text.png"
+          src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/images/illu-text.png"
           alt="illu-text.png"
           className="md:w-[30rem] w-[20rem]"
         />
@@ -30,9 +30,11 @@ const Hero = () => {
         <div className="flex items-center gap-5 text-3xl font-extrabold text-gray-200">
           <img
             className="md:h-16 h-12 "
-            src="/public/images/illu-logo.png.png"
+            src="
+            https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/images/illu-logo.png
+            "
             alt="illu-logo"
-          />{" "}
+          />
           ZERO
         </div>
 

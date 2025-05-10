@@ -25,7 +25,10 @@ const Arena = () => {
             {/* Card bakcground with gradient  */}
 
             <div className="bssolute h-full w-full">
-              <img src="public/images/bento-card1.png" alt="BENTO-CARD1" />
+              <img
+                src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/images/bento-card1.png"
+                alt="BENTO-CARD1"
+              />
 
               {/* buttons */}
               <button className="absolute bottom-0 h-16 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
@@ -43,7 +46,7 @@ const Arena = () => {
               loom
               muted
               playsInline
-              src="public/videos/bento-card2.mp4"
+              src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/videos/bento-card2.mp4"
             ></video>
           </div>
         </div>
@@ -59,7 +62,7 @@ const Arena = () => {
                 muted
                 playsInline
                 className="w-full h-full object-cover"
-                src="public/videos/bento-card3.mp4"
+                src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/videos/bento-card3.mp4"
               ></video>
 
               <h1 className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10  bg-opacity-10 font-exrabold text-2xl">
@@ -74,7 +77,7 @@ const Arena = () => {
                 muted
                 playsInline
                 className="w-full h-full object-cover"
-                src="public/videos/bento-card4.mp4"
+                src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/videos/bento-card4.mp4"
               ></video>
 
               <h1 className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 font-exrabold text-2xl">
@@ -89,7 +92,7 @@ const Arena = () => {
                 muted
                 playsInline
                 className="w-full h-full object-cover"
-                src="public/videos/bento-card5.mp4"
+                src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/videos/bento-card5.mp4"
               ></video>
 
               <h1 className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 font-exrabold text-2xl">
@@ -99,7 +102,10 @@ const Arena = () => {
           </div>
           {/* card 6 -bottom large card  */}
           <div className="relative overflow-hidden rounded-3xl border border-white aspect-[16/9] md:col-span-2 transform transition-transform duration-300 hover:scale-[1.02]">
-            <img src="public/images/bento-card5.png" alt="card-6" />
+            <img
+              src="https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/images/bento-card5.png"
+              alt="card-6"
+            />
             <button className="absolute bottom-0 p-3 h-17 w-full bg-black bg-opacity-70 text-2xl font-bold hover:text-yellow-400 transition-all duration-300 text-nowrap">
               <i class="bx bx-link-extenal"></i>
               Buy Now

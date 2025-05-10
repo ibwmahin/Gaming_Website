@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-import { div } from "framer-motion/client";
 
-//The customCursor component
+// External image base URL
+const IMAGE_BASE_URL =
+  "https://raw.githubusercontent.com/ibwmahin/Gaming_Website/refs/heads/main/public/images/";
+
+// Custom Cursor Component
 function CustomCursor({ isHovering3D }) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const cursorRef = useRef(null);
@@ -13,9 +16,6 @@ function CustomCursor({ isHovering3D }) {
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
-
-    // Giving an EventListener
-
     document.addEventListener("mousemove", handleMouseMove);
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -25,7 +25,7 @@ function CustomCursor({ isHovering3D }) {
   return (
     <motion.div
       ref={cursorRef}
-      className="fixed top-0 left-0 z-50 pointer-events-none mix-blend-difference "
+      className="fixed top-0 left-0 z-50 pointer-events-none mix-blend-difference"
       animate={{
         x: position.x - (isHovering3D ? 12 : 15),
         y: position.y - (isHovering3D ? 12 : 15),
@@ -38,8 +38,6 @@ function CustomCursor({ isHovering3D }) {
         mass: 0.5,
       }}
     >
-      {/* inner motion.div */}
-
       <motion.div
         className={`rounded-full ${
           isHovering3D ? "bg-violet-500" : "bg-white"
@@ -64,10 +62,9 @@ function CustomCursor({ isHovering3D }) {
 }
 
 const Characters = () => {
-  // Track which avatar is selected
   const [selectedAvatar, setSelectedAvatar] = useState("VIKI");
   const [cursorInModelarea, setCursorInModelArea] = useState(false);
-  // Simplified avatar data
+
   const Avatar = {
     VIKI: {
       name: "VIKI",
@@ -86,8 +83,9 @@ const Characters = () => {
       stars: 4,
     },
   };
-  // Get avater data
+
   const currentAvatar = Avatar[selectedAvatar];
+
   const handel3DArreaMouseEnter = () => {
     setCursorInModelArea(true);
   };
@@ -99,7 +97,8 @@ const Characters = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden mb-[10%]">
       <CustomCursor isHovering3D={cursorInModelarea} />
-      {/* Section title */}
+
+      {/* Section Title */}
       <div className="relative z-10 pt-6 text-center">
         <h1
           className="text-5xl font-bold tracking-widest md:-mb-14 mb-8"
@@ -111,24 +110,20 @@ const Characters = () => {
 
       {/* Main Content Area */}
       <div className="relative z-10 flex md:flex-row flex-col items-center w-full h-full p-4">
-        {/* Left Side - Avatar Info and Selection */}
+        {/* Left Side - Info */}
         <div className="w-full md:w-2/4 flex flex-col md:ml-10">
-          {/* Selected avatar info card */}
+          {/* Info Card */}
           <div className="bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 mb-4 border border-gray-800 shadow-[0_0_15px_rgba(167,139,250,0.2)]">
             <h1 className="text-2xl font-semibold mb-2">
               {currentAvatar.name}
             </h1>
           </div>
 
-          {/* Avatar statistics */}
+          {/* Stats */}
           <div className="space-y-3 mb-16">
-            {/* Power */}
             <Stat label="Power" value={currentAvatar.power} />
-            {/* Stable */}
             <Stat label="Stable" value={currentAvatar.stable} />
-            {/* Penetrate */}
             <Stat label="Penetrate" value={currentAvatar.penetrate} />
-            {/* Portable */}
             <Stat label="Portable" value={currentAvatar.portable} />
 
             {/* Action Buttons */}
@@ -142,7 +137,7 @@ const Characters = () => {
             </div>
           </div>
 
-          {/* Avatar Selection Cards */}
+          {/* Avatar Selection */}
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(Avatar).map(([key, data]) => (
               <div
@@ -152,7 +147,11 @@ const Characters = () => {
               >
                 <div className="text-lg mb-2">{data.name}</div>
                 <div className="w-20 h-20 bg-gray-800/50 rounded-md flex items-center justify-center mb-2">
-                  <img src={`/images/${key}.png`} alt={`${key}_IMAGE`} />
+                  <img
+                    src={`${IMAGE_BASE_URL}${key}.png`}
+                    alt={`${key}_IMAGE`}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
                 <div className="flex">
                   {[...Array(data.stars)].map((_, i) => (
@@ -170,7 +169,7 @@ const Characters = () => {
           </div>
         </div>
 
-        {/* Right Side - 3D Model Container */}
+        {/* Right Side - 3D Model */}
         <div
           className="relative md:w-2/4 w-full md:h-full h-80 flex items-center justify-center overflow-hidden"
           onMouseEnter={handel3DArreaMouseEnter}
@@ -207,7 +206,7 @@ const Characters = () => {
   );
 };
 
-// Reusable Stat Bar Component
+// Stat Bar Component
 const Stat = ({ label, value }) => (
   <div className="flex items-center">
     <span className="w-24 text-gray-400">{label}</span>
