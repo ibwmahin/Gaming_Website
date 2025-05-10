@@ -1,22 +1,39 @@
-# React + Vite
+# React Animated Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully responsive and animated portfolio website built using React, deployed via GitHub Pages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern, clean UI
+- Responsive layout
+- Smooth animations
+- Dynamic routing
+- Integrated image and video content
+- Deployed using GitHub Pages
 
-## Expanding the ESLint configuration
+## Challenges Faced
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Gaming_Website
+- Deployment issues with GitHub Pages
+- Static asset path errors after deployment
+- Media not auto-playing on load
 
+## Solutions
 
+- Used raw GitHub content URLs for images/videos
+- Enabled browser autoplay settings
+- Rechecked relative pathing for static assets
 
+## Tech Stack
 
-# ResPonsive Gaming WebSite
+- React
+- HTML / TailWind / JS
+- GitHub Pages
+- Vite
 
-In this project i tryed to make a clone website of https://illuvium.io/ website ,
+## Live Demo
 
+[View Live](https://ibwmahin.github.io/Gaming_Website/)
 
+## Author
+
+Mahin (ibwmahin)
