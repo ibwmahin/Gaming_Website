@@ -1,4 +1,4 @@
-# React Animated Portfolio Website
+# React Animated Gaming Website
 
 This is a fully responsive and animated portfolio website built using React, deployed via GitHub Pages.
 
