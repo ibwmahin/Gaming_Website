@@ -2,6 +2,8 @@
 
 This is a fully responsive and animated portfolio website built using React, deployed via GitHub Pages.
 
+![Website Preview](public/images/gaming-website.png)
+
 ## Features
 
 - Modern, clean UI
